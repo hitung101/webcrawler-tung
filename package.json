@@ -1,0 +1,21 @@
+{
+  "name": "crawler-job",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "deploy": "wrangler deploy",
+    "dev": "wrangler dev",
+    "start": "wrangler dev",
+    "test": "vitest"
+  },
+  "devDependencies": {
+    "@cloudflare/vitest-pool-workers": "^0.4.5",
+    "vitest": "1.5.0",
+    "wrangler": "^3.72.2"
+  },
+  "dependencies": {
+    "@cloudflare/d1": "^1.4.1",
+    "hono": "^4.5.4",
+    "puppeteer": "^23.3.1"
+  }
+}

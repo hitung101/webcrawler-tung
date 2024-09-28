@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="en" http-equiv="content-language" />
+		<meta charset="utf-8" />
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta
+			content="The best IT and software developer jobs in Vietnam – high salary and top companies. Get your new job today on ITviec.com."
+			name="description"
+		/>
+		<title></title>
+		<meta
+			content="The best IT and software developer jobs in Vietnam – high salary and top companies. Get your new job today on ITviec.com."
+			property="og:description"
+		/>
+
+		<!-- Font Google - Lexend -->
+		<!-- Connect to domain of google font -->
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<!-- Optionally increase loading priority -->
+		<link as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&amp;display=swap" rel="preload" />
+		<!-- Async CSS -->
+		<link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap"
+    media="print"
+    onload="this.onload=null;this.media='all';"
+    rel="stylesheet"
+/>
+
+		<!-- No-JS fallback -->
+		<noscript>
+			<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+		</noscript>
+
+		<link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png" />
+		<link href="" rel="apple-touch-icon" sizes="152x152" />
+		<link href="" rel="apple-touch-icon" sizes="120x120" />
+		<link href="" rel="apple-touch-icon" sizes="76x76" />
+		<link href="" rel="apple-touch-icon" sizes="60x60" />
+
+		<meta name="csrf-token" content="" />
+		<meta name="utm-tracking-params" content="" />
+		<!-- Update -->
+		<link
+			rel="stylesheet"
+			href="https://timviec.pages.dev/assets/css/application-7c1ece797c5800ad742bb6b0a49afffc42f740f89b24b13982cd2c8ccfc0fb0a.css"
+			data-turbo-track="reload"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://timviec.pages.dev/assets/css/custom.css"
+			data-turbo-track="reload"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/turbo.min-14b3b6b1cc0e0602d2e3e564809fa36f480beaca91410d9e58c4ace783d8f903.js"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/stimulus.min-8ca9f8b09d48335c44b8f598040f37703d14dbc8087a9bd21f9b90c6edb0bcdc.js"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js"
+		/>
+
+		<script
+			src="https://timviec.pages.dev/assets/js/es-module-shims.min-aaf6d523b2527eeef016d5187a994e418c77e8105ab9de97013543d5403ca066.js"
+			async="async"
+			data-turbo-track="reload"
+		></script>
+	</head>
+	<body class="jobs_show" data-env="production" x-data="app">
+		<header class="header">
+			<nav class="navbar fixed-top navbar-expand-lg fixed lg:h-inherit" data-controller="page-header" data-page-header-target="header">
+				<div class="container icontainer-header lg:h-inherit lg:flex-nowrap">
+					<div class="nav-brand ime-8">
+						<a data-controller="utm-tracking" href="/"
+							><img class="logo-itviec" alt="logo" src="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png" width="108" height="40" />
+						</a>
+					</div>
+					<div class="navbar-collapse lg:h-inherit">
+						<ul class="navbar-nav me-auto igap-2 align-items-center lg:flex lg:row-reverse lg:h-inherit">
+							<li class="nav-item main-menu position-relative">
+								<a data-controller="utm-tracking" class="text-reset d-flex align-items-center ipx-2" href="/">Trang chủ </a>
+							</li>
+							
+						</ul>
+		
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="d-flex flex-column min-vh-main">
+			<div class="flex-grow-1">
+
+				<div class="main-tablet jd-main position-relative">
+					<div class="gradient-light-grey-background d-none d-md-block"></div>
+					<div
+						class="icontainer"
+						data-controller="jobs--jd-scroll"
+						data-jobs--jd-scroll-active-class="scroll-active"
+						data-jobs--jd-scroll-position-class="position-sticky"
+						data-jobs--jd-scroll-scrollable-value
+					>
+						<div class="row im-0 ip-0">
+							<div class="col-md-8 im-0 ip-0">
+								<div
+									class="imt-8 ipb-3 ipx-5 bg-it-white text-rich-grey w-100 position-sticky job-show-header"
+									data-jobs--jd-scroll-target="jobHeader"
+								>
+									<div class="job-header-info">
+										<h1 class="ipt-md-6 text-it-black" x-text="data.title"></h1>
+										<div class="employer-name" x-text="company.name"></div>
+										<div class="d-flex align-items-center fw-700 ifs-18">
+											<div class="d-flex align-items-center salary text-rich-grey">
+												<svg
+													fill="none"
+													height="24"
+													stroke="currentColor"
+													viewbox="0 0 24 24"
+													width="24"
+													xmlns="http://www.w3.org/2000/svg"
+												>
+													<path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+													<path
+														d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+														stroke-linecap="round"
+														stroke-linejoin="round"
+														stroke-width="2"
+														stroke="currentColor"
+													></path>
+													<circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2" stroke="currentColor"></circle>
+												</svg>
+
+												<a
+													data-controller="utm-tracking"
+													class="sign-in-view-salary text-reset ips-2 text-decoration-underline"
+													href=""
+													x-text="data.salary"
+													></a
+												>
+											</div>
+										</div>
+									</div>
+									<div class="job-actions">
+										<div class="d-flex align-items-center justify-content-between">
+											<a
+												class="ibtn ibtn-md ibtn-primary w-100"
+												rel="nofollow"
+												:href="data.url"
+												>Xem ngay</a
+											>
+										</div>
+									</div>
+								</div>
+								<div class="ipy-3 ipx-5 bg-it-white text-rich-grey job-show-info box-shadow-medium">
+									<div class="imb-6">
+										<div class="d-flex flex-column gap-2">
+											<div class="d-inline-block text-dark-grey">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgb(171, 168, 168);">
+													<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+													<path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+												</svg>
+												
+												<span class="normal-text text-rich-grey" x-text="data.location"
+													></span
+												>
+												<a
+													target="_blank"
+													class="align-middle"
+													href="https://www.google.com/maps?q=Sabay+Building%2C+427+Truong+Chinh+Street%2C+14+Ward%2C+Tan+Binh%2C+Ho+Chi+Minh"
+													><svg class="feather-icon icon-sm hyperlink">
+														<use
+															href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#external-link"
+														></use>
+													</svg>
+												</a>
+											</div>
+											<div class="d-inline-block text-dark-grey preview-header-item">
+												<div class="d-flex align-items-center">
+													<div class="imb-1 ime-1">
+														<svg fill="none" height="16" viewbox="0 0 24 25" width="16" xmlns="http://www.w3.org/2000/svg">
+															<g clip-path="url(#clip0_947_6633)">
+																<path
+																	d="M19 14.625C19 13.6967 18.6312 12.8065 17.9749 12.1501C17.3185 11.4937 16.4283 11.125 15.5 11.125H8.5C7.57174 11.125 6.6815 11.4937 6.02513 12.1501C5.36875 12.8065 5 13.6967 5 14.625"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																></path>
+																<path
+																	d="M12 8.5C13.933 8.5 15.5 6.933 15.5 5C15.5 3.067 13.933 1.5 12 1.5C10.067 1.5 8.5 3.067 8.5 5C8.5 6.933 10.067 8.5 12 8.5Z"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																></path>
+																<path
+																	d="M11.5 18.9375H12.5"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																></path>
+																<path
+																	d="M4.56116 22.7812L2.90039 15.0938H21.0996L19.3696 22.7812"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																></path>
+																<line
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																	x1="1"
+																	x2="23"
+																	y1="23.5"
+																	y2="23.5"
+																></line>
+															</g>
+															<defs>
+																<clippath id="clip0_947_6633">
+																	<rect fill="white" height="24" transform="translate(0 0.5)" width="24"></rect>
+																</clippath>
+															</defs>
+														</svg>
+													</div>
+													<span class="normal-text text-rich-grey ms-1">Tại văn phòng</span>
+												</div>
+											</div>
+											<div class="d-inline-block text-dark-grey preview-header-item">
+												<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgb(172, 170, 170);">
+													<path d="M12 2C6.486 2 2 6.486 2 12s4.486 10 10 10 10-4.486 10-10S17.514 2 12 2zm0 18c-4.411 0-8-3.589-8-8s3.589-8 8-8 8 3.589 8 8-3.589 8-8 8z"></path>
+													<path d="M13 7h-2v6h6v-2h-4z"></path>
+												</svg>
+												
+												<span class="normal-text text-rich-grey" x-text="data.daysPosted"></span>
+											</div>
+											<div class="imt-2">
+												<span class="ime-3 small-text text-rich-grey">Skills:</span>
+												<template x-for="item in data.requirement">
+													<a class="text-reset" data-controller="utm-tracking" href=""
+														><div class="itag itag-light itag-sm" x-text="item"></div> </a>
+												</template>
+											</div>
+										</div>
+									</div>
+								</div>
+								<section
+									class="job-content imt-5 ipy-3 ipx-5 bg-it-white box-shadow-medium border-radius-large-md text-it-black"
+									data-jobs--jd-scroll-target="jobContent"
+									x-html="data.description"
+								>
+									
+								</section>
+							</div>
+							<div class="col-md-4 im-0 ip-0 ips-md-6">
+								<section
+									class="imt-8 ipy-6 ipx-5 bg-it-white box-shadow-medium border-radius-large-md text-rich-grey job-show-employer-info"
+								>
+									<!-- Last updated: "2024-08-13 09:42:22 +0700"-->
+									<div class="d-flex flex-column flex-md-row align-items-center align-items-md-start text-center text-md-start">
+										<a data-controller="utm-tracking" href=""
+											>
+												<img
+													:alt="company.name"
+													class="border border-radius-normal employer-logo"
+													:src="company.logo"
+													height="120"
+													width="120"
+												/>
+										</a>
+										<div class="ips-md-3">
+											<h3 class="ipt-3 ipt-md-1 ipb-1 ipb-md-0 text-it-black text-clamp-3" x-text="company.name"></h3>
+											
+										</div>
+									</div>
+									<div class="imt-4">
+										<div class="row ipy-2 gx-0 border-bottom-dashed">
+											<div class="col text-dark-grey">Lĩnh vực chính</div>
+											<div class="col text-end text-it-black" x-text="company.field"></div>
+										</div>
+										<div class="row ipy-2 gx-0 border-bottom-dashed">
+											<div class="col text-dark-grey">Số lượng nhân sự</div>
+											<div class="col text-end text-it-black" x-text="company.scale"></div>
+										</div>
+										<div class="row ipy-2 gx-0 border-bottom-dashed">
+											<div class="col text-dark-grey">Địa chỉ :</div>
+											<div class="col text-dark-grey" x-text="company.address"></div>
+											
+										</div>
+									</div>
+								</section>
+							</div>
+						</div>
+						<div class="row imt-md-6 ipb-16 imx-0 imt-6">
+							<div class="col-md-8 ipx-0">
+								<h2 class="imb-6 ipx-5 ipx-md-0">Dành riêng cho bạn</h2>
+								<div class="row relative-jobs">
+									<template x-for="item in jobRecommend">
+										<div class="col-md-6 ipx-5 ipy-2 ip-md-3">
+											<div
+												class="job-card ipt-4 h-100 d-flex flex-column box-shadow-medium border-radius-large position-relative bg-light-warning-color super-hot"
+											>
+												<div class="ipx-4 ipx-md-3 flex-grow-1">
+													<div class="ilabel position-absolute ilabel-danger end-0">
+														<svg fill="none" height="15" viewbox="0 0 12 15" width="12" xmlns="http://www.w3.org/2000/svg">
+															<path
+																clip-rule="evenodd"
+																d="M8.35103 7.22088C8.77945 5.51855 9.97941 4.56322 11.074 4.45661C9.84457 6.98536 12.8712 8.79743 11.1649 11.8192C10.2049 13.5193 8.33941 14.4836 6.25533 14.4997C0.303047 14.5458 -0.829202 8.4487 1.27822 4.29598C0.712659 8.76776 4.77576 8.50349 3.49039 5.62166C2.56746 3.55246 4.57378 0.432578 7.73614 0.50111C5.5579 3.61357 8.78633 4.4127 8.35103 7.22088Z"
+																fill-rule="evenodd"
+																fill="#FFDD85"
+															></path>
+														</svg>
+	
+														SUPER HOT
+													</div>
+	
+													<div class="d-flex align-items-center justify-content-between">
+														<span class="small-text text-dark-grey" x-text="item.daysPosted"></span>
+													</div>
+													<h3 class="imt-3 text-it-black text-break text-clamp-2">
+														<a
+															data-controller="utm-tracking"
+															class="text-reset"
+															:href="item.slug"
+															x-text="item.title"
+														>
+														</a>
+													</h3>
+													<!-- <div class="imy-2 d-flex align-items-center">
+														<a
+															data-controller="utm-tracking"
+															class="job-card-logo border-solid box-shadow-normal border-radius-normal bg-white"
+															href=""
+															><picture>
+																<source
+																	data-srcset="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVVIRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1ae7acc317bfb2f261c8b580725af2d56ae34b7e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBPZ2wzWldKd09oSnlaWE5wZW1WZmRHOWZabWwwV3dkcGFXbHAiLCJleHAiOm51bGwsInB1ciI6InZhcmlhdGlvbiJ9fQ==--20b0435834affc851fb8b496383cefc8135158a8/money-forward-vi-t-nam-logo.png"
+																/>
+																<img
+																	alt="MONEY FORWARD VIETNAM CO.,LTD Vietnam Small Logo"
+																	class="h-100"
+																	data-controller="lazyload"
+																	data-src="https://itviec.com/rails/active_storage/representations/proxy/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBBOVVIRFE9PSIsImV4cCI6bnVsbCwicHVyIjoiYmxvYl9pZCJ9fQ==--1ae7acc317bfb2f261c8b580725af2d56ae34b7e/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJY0c1bkJqb0dSVlE2RW5KbGMybDZaVjkwYjE5bWFYUmJCMmxwYVdrPSIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--c8c20c63b868249effdba9ba4f05aa0c5b77cab3/money-forward-vi-t-nam-logo.png"
+																	width="48"
+																/>
+															</picture> </a
+														><span class="ims-2 small-text">
+															<a
+																data-controller="utm-tracking"
+																class="text-rich-grey text-clamp-2"
+																href="/companies/money-forward-vietnam-co-ltd?lab_feature=preview_jd_page"
+																>MONEY FORWARD VIETNAM CO.,LTD</a
+															>
+														</span>
+													</div> -->
+													<div class="fw-500">
+														<div class="d-flex align-items-center salary text-rich-grey">
+															<svg
+																fill="none"
+																height="16"
+																stroke="currentColor"
+																viewbox="0 0 24 24"
+																width="16"
+																xmlns="http://www.w3.org/2000/svg"
+															>
+																<path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+																<path
+																	d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+																	stroke-linecap="round"
+																	stroke-linejoin="round"
+																	stroke-width="2"
+																	stroke="currentColor"
+																></path>
+																<circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2" stroke="currentColor"></circle>
+															</svg>
+	
+															<a
+																data-controller="utm-tracking"
+																class="sign-in-view-salary text-reset ips-2 text-decoration-underline"
+																:href="item.slug"
+																x-text="item.salary"
+																></a
+															>
+														</div>
+													</div>
+													<div class="border-top-dashed imy-3"></div>
+													<div class="d-flex align-items-end imb-1">
+														<span class="text-dark-grey lh-1">
+															<svg fill="none" height="16" viewbox="0 0 24 25" width="16" xmlns="http://www.w3.org/2000/svg">
+																<g clip-path="url(#clip0_947_6633)">
+																	<path
+																		d="M19 14.625C19 13.6967 18.6312 12.8065 17.9749 12.1501C17.3185 11.4937 16.4283 11.125 15.5 11.125H8.5C7.57174 11.125 6.6815 11.4937 6.02513 12.1501C5.36875 12.8065 5 13.6967 5 14.625"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M12 8.5C13.933 8.5 15.5 6.933 15.5 5C15.5 3.067 13.933 1.5 12 1.5C10.067 1.5 8.5 3.067 8.5 5C8.5 6.933 10.067 8.5 12 8.5Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M11.5 18.9375H12.5"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M4.56116 22.7812L2.90039 15.0938H21.0996L19.3696 22.7812"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<line
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																		x1="1"
+																		x2="23"
+																		y1="23.5"
+																		y2="23.5"
+																	></line>
+																</g>
+																<defs>
+																	<clippath id="clip0_947_6633">
+																		<rect fill="white" height="24" transform="translate(0 0.5)" width="24"></rect>
+																	</clippath>
+																</defs>
+															</svg>
+														</span>
+														<span class="ips-2 small-text text-rich-grey lh-1"> Tại văn phòng </span>
+													</div>
+													<div class="d-flex align-items-center">
+														<span class="text-dark-grey lh-1">
+															<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgb(171, 169, 169);">
+																<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+																<path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+															</svg>
+																													</span>
+														<span class="ips-2 small-text text-rich-grey" x-text="item.location"></span>
+													</div>
+													<div class="d-flex flex-wrap imt-3 imb-5 igap-2">
+														<template x-for="skill in item.requirement">
+															<a class="text-reset" data-controller="utm-tracking" href="/it-jobs/automation-test?click_source=Skill+tag"
+																><div class="itag itag-light itag-sm" x-text="skill"></div> </a>
+														</template>
+													</div>
+												</div>
+											</div>
+										</div>
+									</template>
+
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- JobApplications Errors -->
+
+			</div>
+			<div class="border-top">
+				<div class="main ipy-4 bg-light-grey">
+					<div class="icontainer">
+						<div class="d-flex flex-column flex-md-row justify-content-between">
+							<div class="d-inline-flex flex-column flex-md-row">
+								<div class="text-rich-grey">
+									<a class="text-reset" data-controller="utm-tracking" href="/">Trang chủ</a>
+								</div>
+								<div class="text-rich-grey d-flex align-items-start text-wrap">
+									<span class="ipx-2">›</span>
+									<a
+										class="text-reset"
+										data-controller="utm-tracking"
+										:href="data.slug"
+										x-text="data.title"
+										></a
+									>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer ipt-md-12 position-relative">
+			<div class="container-xxl p-0 imb-12">
+				<div class="row d-flex justify-content-md-between justify-content-center m-0 ipt-17 ipt-md-0" id="accordionFooter">
+					<div class="col-lg-3">
+						<div class="footer-logo">
+							<div class="footer-slogan mx-auto ipt-2 text-md-start text-center">
+								<img
+									height="50"
+									class="logo-itviec"
+									alt="logo"
+									src="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png"
+								/>
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 p-0">
+						<h4 class="footer-header imx-md-0 imx-5 text-silver-grey ipy-4 pe-none">Liên hệ với chúng tôi:</h4>
+						<div class="d-flex flex-column imx-md-0 imx-5 small-text text-dark-grey">
+							<div class="d-flex align-items-center ipb-3 pe-none">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgb(171, 169, 169);">
+									<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+									<path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+								</svg>
+								
+								<p class="ims-2">SĐT: (+84) 123456789</p>
+							</div>
+							<div class="d-flex align-items-center ipb-3 pe-none">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" style="fill: rgb(171, 169, 169);">
+									<path d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"></path>
+									<path d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"></path>
+								</svg>
+								
+								<p class="ims-2">Email: hitunghi@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<script>
+			document.addEventListener('alpine:init', () => {
+				Alpine.data('app', () => ({
+					data: null,
+					company: null,
+					jobRecommend: [],
+					async init() {
+						await this.init_data();
+						await this.getJobRecommend();
+						document.getElementsByTagName('title')[0].innerText = this.data.title
+					},
+					async init_data() {
+						var queryString = window.location.href;
+						var slug = queryString.split('/').pop();
+						var api = `https://crawler-job.tung2003ictu.workers.dev/api/v1/job/${slug}`
+						var result = await (await fetch(api)).json();
+						this.data = result.data[0];
+						this.company = (await (await fetch(`https://crawler-job.tung2003ictu.workers.dev/company?id=${this.data.company_id}`)).json()).data.results[0]
+						if(this.data.lower_bound == 0 && this.data.upper_bound == 0){
+							this.data.salary = "Thỏa thuận"
+						}else if (this.data.lower_bound == 0) {
+							this.data.salary = 'Tới ' + this.data.upper_bound + ' ' + this.data.unit;
+						} else if (this.data.upper_bound == 0) {
+							this.data.salary = 'Trên ' + this.data.lower_bound + ' ' + this.data.unit;
+						} else {
+							this.data.salary = this.data.lower_bound + ' - ' + this.data.upper_bound + ' ' + this.data.unit;
+						}
+						this.data.requirement = this.data.requirement.split(',');
+						this.data.daysPosted = 'Được đăng ' + this.daysPassed(this.data.created_at) + ' ngày trước';
+						this.data.slug = 'https://crawler-job.tung2003ictu.workers.dev/job-show/' + this.data.slug;
+					},
+					async getJobRecommend(){
+						var api = 'https://crawler-job.tung2003ictu.workers.dev/jobs?page=1&limit=8';
+						try {
+							var result = await (await fetch(api)).json();
+						} catch (err) {
+							console.log(err);
+						}
+						this.jobRecommend = result.data;
+						for (item of this.jobRecommend) {
+							if(item.lower_bound == 0 && item.upper_bound == 0){
+								item.salary = "Thỏa thuận"
+							}else if (item.lower_bound == 0) {
+								item.salary = 'Tới ' + item.upper_bound + ' ' + item.unit;
+							} else if (item.upper_bound == 0) {
+								item.salary = 'Trên ' + item.lower_bound + ' ' + item.unit;
+							} else {
+								item.salary = item.lower_bound + ' - ' + item.upper_bound + ' ' + item.unit;
+							}
+							item.requirement = item.requirement.split(',');
+							item.daysPosted = 'Được đăng ' + this.daysPassed(item.created_at) + ' ngày trước';
+							item.slug = 'https://crawler-job.tung2003ictu.workers.dev/job-show/' + item.slug;
+						}
+					},
+					daysPassed(dateString) {
+						// Bước 1: Chuyển đổi chuỗi ngày tháng thành đối tượng Date
+						var inputDate = new Date(dateString);
+
+						// Bước 2: Lấy ngày hiện tại
+						var currentDate = new Date();
+
+						// Bước 3: Tính toán số ngày đã qua
+						var timeDifference = currentDate - inputDate; // Đơn vị là milliseconds
+						var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+						if (daysDifference <= 0) {
+							daysDifference = 1;
+						}
+						return daysDifference;
+					},
+				}));
+			});
+		</script>
+	</body>
+</html>

@@ -1,0 +1,1158 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta content="en" http-equiv="content-language" />
+		<meta charset="utf-8" />
+		<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+		<meta content="width=device-width, initial-scale=1" name="viewport" />
+		<meta content="telephone=no" name="format-detection" />
+		<meta
+			content="Công việc IT tốt nhất hiện nay"
+			name="description"
+		/>
+		<title>Tìm kiếm việc làm hot</title>
+		<meta
+			content="Công việc IT tốt nhất hiện nay"
+			property="og:description"
+		/>
+		<meta content="Việc làm hàng đầu hiện nay" property="og:title" />
+
+		<!-- Font Google - Lexend -->
+		<!-- Connect to domain of google font -->
+		<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+		<!-- Optionally increase loading priority -->
+		<link as="style" href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&amp;display=swap" rel="preload" />
+		<!-- Async CSS -->
+		<link
+    href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&display=swap"
+    media="print"
+    onload="this.onload=null;this.media='all';"
+    rel="stylesheet"
+/>
+
+		<!-- No-JS fallback -->
+		<noscript>
+			<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet" />
+		</noscript>
+
+		<link rel="icon" type="image/x-icon" href="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png" />
+		<link href="" rel="apple-touch-icon" sizes="152x152" />
+		<link href="" rel="apple-touch-icon" sizes="120x120" />
+		<link href="" rel="apple-touch-icon" sizes="76x76" />
+		<link href="" rel="apple-touch-icon" sizes="60x60" />
+
+		<meta name="csrf-token" content="" />
+		<meta name="utm-tracking-params" content="" />
+		<!-- Update -->
+		<link
+			rel="stylesheet"
+			href="https://timviec.pages.dev/assets/css/application-7c1ece797c5800ad742bb6b0a49afffc42f740f89b24b13982cd2c8ccfc0fb0a.css"
+			data-turbo-track="reload"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://timviec.pages.dev/assets/css/custom.css"
+			data-turbo-track="reload"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/turbo.min-14b3b6b1cc0e0602d2e3e564809fa36f480beaca91410d9e58c4ace783d8f903.js"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/stimulus.min-8ca9f8b09d48335c44b8f598040f37703d14dbc8087a9bd21f9b90c6edb0bcdc.js"
+		/>
+		<link
+			rel="modulepreload"
+			href="https://timviec.pages.dev/assets/js/stimulus-loading-1fc59770fb1654500044afd3f5f6d7d00800e5be36746d55b94a2963a7a228aa.js"
+		/>
+
+		<script
+			src="https://timviec.pages.dev/assets/js/es-module-shims.min-aaf6d523b2527eeef016d5187a994e418c77e8105ab9de97013543d5403ca066.js"
+			async="async"
+			data-turbo-track="reload"
+		></script>
+	</head>
+	<body class="search_jobs" data-env="production" x-data="app">
+		<header class="header">
+			<nav class="navbar fixed-top navbar-expand-lg fixed lg:h-inherit" data-controller="page-header" data-page-header-target="header">
+				<div class="container icontainer-header lg:h-inherit lg:flex-nowrap">
+					<div class="nav-brand ime-8">
+						<a data-controller="utm-tracking" href="/"
+							><img class="logo-itviec" alt="logo" src="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png" width="108" height="40" />
+						</a>
+					</div>
+					<div class="navbar-collapse lg:h-inherit">
+						<ul class="navbar-nav me-auto igap-2 align-items-center lg:flex lg:row-reverse lg:h-inherit">
+							<li class="nav-item main-menu position-relative">
+								<a data-controller="utm-tracking" class="text-reset d-flex align-items-center ipx-2" href="/">Trang chủ </a>
+							</li>
+							
+						</ul>
+						
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main class="d-flex flex-column min-vh-main">
+			<div class="flex-grow-1">
+				<div class="ipx-md-40 ipx-5 bg-gradient-search position-relative">
+					<div class="icontainer-search-form">
+						<div class="search-box mx-auto ipt-12 ipb-16 ipy-md-16">
+							<!-- / Header -->
+							<h1 class="text-white ipb-8">Tìm kiếm công việc </h1>
+							<!-- / Search Form -->
+							<!-- Last updated: "2024-08-07 17:06:58 +0700"-->
+							<div class="search-box">
+								<form action="/" method="get" id="search-form" @submit.prevent="searchJob">
+									<div class="d-flex flex-column flex-lg-row">
+										<!-- / City -->
+										<div class="search-city flex-shrink-0 imb-2 imb-lg-0 search-form-city-section lg:pl-3">
+											<select
+												name="location"
+												id="city"
+												tabindex=""
+												class=""
+												style="position: relative; z-index: 1; transform: translateY(0)"
+											>
+												<option value="">Thành phố</option>
+												<template x-for="province in listProvince">
+													<option :value="province" x-text="province"></option>
+												</template>
+											</select>
+											<div class="map-pin-box position-absolute top-50 translate-middle-y z-1 pe-none">
+												<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="17"
+    height="17"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+													<path
+														d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"
+													></path>
+													<path
+														d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"
+													></path>
+												</svg>
+											</div>
+											<div class="arrow-down-box position-absolute top-50 translate-middle-y z-1 pe-none">
+												<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+													<path d="M16.939 7.939 12 12.879l-4.939-4.94-2.122 2.122L12 17.121l7.061-7.06z"></path>
+												</svg>
+											</div>
+										</div>
+										<!-- / Keyword and Button -->
+										<div class="d-flex flex-grow-1">
+											<!-- / Keyword -->
+											<div class="search-keyword w-100 imx-md-3 position-relative search-form-keyword-section dropdown">
+												<input
+													type="text"
+													name="keyword"
+													id="keyword"
+													value=""
+													maxlength="100"
+													class="form-control ipe-10 dropdown-toggle"
+													placeholder="Việc làm IT"
+													@input="showBtnClear()"
+												/>
+												<div class="dropdown-menu w-100 ts-dropdown m-0"></div>
+												<a class="position-absolute clear-keyword" x-show="btnClearText" @click="clearSearchInput()">
+													<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+														<path
+															d="m16.192 6.344-4.243 4.242-4.242-4.242-1.414 1.414L10.535 12l-4.242 4.242 1.414 1.414 4.242-4.242 4.243 4.242 1.414-1.414L13.364 12l4.242-4.242z"
+														></path>
+													</svg>
+												</a>
+											</div>
+											<!-- / Button -->
+											<div class="flex-shrink-1">
+												<button class="ibtn ibtn-primary ibtn-search ifs-16" type="submit">
+													<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170);;" 
+>
+
+														<path
+															d="M10 18a7.952 7.952 0 0 0 4.897-1.688l4.396 4.396 1.414-1.414-4.396-4.396A7.952 7.952 0 0 0 18 10c0-4.411-3.589-8-8-8s-8 3.589-8 8 3.589 8 8 8zm0-14c3.309 0 6 2.691 6 6s-2.691 6-6 6-6-2.691-6-6 2.691-6 6-6z"
+														></path>
+													</svg>
+													<span class="d-none d-md-inline"> Search </span>
+												</button>
+											</div>
+										</div>
+									</div>
+									<!-- / Overlay -->
+									<div class="search-overlay first-overlay"></div>
+									<div class="search-overlay second-overlay z-1" data-action="click->search--autocomplete#closeOverlay"></div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- / Company Spotlight -->
+				<div class="d-flex flex-column-reverse flex-md-column">
+					<!-- / Search Preview Job -->
+					<div class="main bg-light-grey">
+						<div class="icontainer">
+							<div
+								class="ipt-6"
+								data-controller="jobs--filter"
+								data-jobs--filter-not-match-value="Cannot find any matches for your search term"
+							>
+								
+								<div class="row imt-6 imx-0 search-result" data-jobs--filter-target="searchResult">
+									<div class="col-md-6 card-jobs-list ips-0 ipe-0 ipe-md-6" data-jobs--filter-target="jobList">
+										<template x-for="item in firstHalf">
+											<div class="job-card ipt-2 d-flex flex-column border-radius-large position-relative bg-light-warning-color super-hot">
+												<div class="ipx-4 ipx-md-3">
+													<div class="ilabel position-absolute ilabel-danger end-0" style="background-color: #ADD8E6; color: #000000;">
+														XEM NGAY
+													  </div>
+													  
+													
+
+													<div class="ipy-2">
+														<div class="d-flex align-items-center justify-content-between position-relative">
+															<span class="small-text text-dark-grey" x-text="item.daysPosted"> </span>
+														</div>
+														<h3 class="imt-3">
+															<a
+																target="_blank"
+																class="text-it-black"
+																data-controller="utm-tracking"
+																data-search--job-selection-target="jobTitle"
+																:href="item.slug"
+																x-text="item.title"
+															></a>
+														</h3>
+														<div class="ipb-3 fw-500">
+															<div class="d-flex align-items-center salary text-rich-grey">
+																<svg
+																	fill="none"
+																	height="20"
+																	stroke="currentColor"
+																	viewbox="0 0 24 24"
+																	width="20"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+																	<path
+																		d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2" stroke="currentColor"></circle>
+																</svg>
+
+																<a
+																	data-controller="utm-tracking"
+																	class="sign-in-view-salary text-reset ips-2 text-decoration-underline"
+																	:href="item.slug"
+																	x-text="item.salary"
+																></a>
+															</div>
+														</div>
+														<div class="border-top-dashed"></div>
+														<div class="imt-2"></div>
+														<div class="d-flex align-items-center text-dark-grey imt-1">
+															<svg fill="none" height="16" viewbox="0 0 24 25" width="16" xmlns="http://www.w3.org/2000/svg">
+																<g clip-path="url(#clip0_947_6633)">
+																	<path
+																		d="M19 14.625C19 13.6967 18.6312 12.8065 17.9749 12.1501C17.3185 11.4937 16.4283 11.125 15.5 11.125H8.5C7.57174 11.125 6.6815 11.4937 6.02513 12.1501C5.36875 12.8065 5 13.6967 5 14.625"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M12 8.5C13.933 8.5 15.5 6.933 15.5 5C15.5 3.067 13.933 1.5 12 1.5C10.067 1.5 8.5 3.067 8.5 5C8.5 6.933 10.067 8.5 12 8.5Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M11.5 18.9375H12.5"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M4.56116 22.7812L2.90039 15.0938H21.0996L19.3696 22.7812"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<line
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																		x1="1"
+																		x2="23"
+																		y1="23.5"
+																		y2="23.5"
+																	></line>
+																</g>
+																<defs>
+																	<clippath id="clip0_947_6633">
+																		<rect fill="white" height="24" transform="translate(0 0.5)" width="24"></rect>
+																	</clippath>
+																</defs>
+															</svg>
+
+															<span class="ips-2 small-text text-rich-grey"> Tại văn phòng</span>
+														</div>
+														<div class="d-flex align-items-center text-dark-grey imt-1">
+															<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+																<path
+																	d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"
+																></path>
+																<path
+																	d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"
+																></path>
+															</svg>
+
+															<span class="ips-2 small-text text-rich-grey" x-text="item.location"></span>
+														</div>
+														<div class="imt-3 imb-2">
+															<template x-for="requirement in item.requirement">
+																<a class="text-reset" data-controller="utm-tracking" href="#"
+																	><div class="itag itag-light itag-sm" x-text="requirement"></div>
+																</a>
+															</template>
+														</div>
+													</div>
+												</div>
+											</div>
+										</template>
+									</div>
+									<div class="col-md-6 card-jobs-list ips-0 ipe-0 ipe-md-6" data-jobs--filter-target="jobList">
+										<template x-for="item in secondHalf">
+											<div class="job-card ipt-2 d-flex flex-column border-radius-large position-relative bg-light-warning-color super-hot">
+												<div class="ipx-4 ipx-md-3">
+													<div class="ilabel position-absolute ilabel-danger end-0" style="background-color: #FFDD85;">
+														XEM NGAY
+													  </div>
+													  
+
+													<div class="ipy-2">
+														<div class="d-flex align-items-center justify-content-between position-relative">
+															<span class="small-text text-dark-grey" x-text="item.daysPosted"> </span>
+														</div>
+														<h3 class="imt-3">
+															<a
+																target="_blank"
+																class="text-it-black"
+																data-controller="utm-tracking"
+																data-search--job-selection-target="jobTitle"
+																:href="item.slug"
+																x-text="item.title"
+															></a>
+														</h3>
+														<div class="ipb-3 fw-500">
+															<div class="d-flex align-items-center salary text-rich-grey">
+																<svg
+																	fill="none"
+																	height="20"
+																	stroke="currentColor"
+																	viewbox="0 0 24 24"
+																	width="20"
+																	xmlns="http://www.w3.org/2000/svg"
+																>
+																	<path d="M12.0044 6V18" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"></path>
+																	<path
+																		d="M14.9287 7.90332H10.5395C9.99625 7.90332 9.47527 8.11912 9.09114 8.50325C8.70701 8.88738 8.49121 9.40836 8.49121 9.9516C8.49121 10.4948 8.70701 11.0158 9.09114 11.4C9.47527 11.7841 9.99625 11.9999 10.5395 11.9999H13.4656C14.0088 11.9999 14.5298 12.2157 14.914 12.5998C15.2981 12.9839 15.5139 13.5049 15.5139 14.0482C15.5139 14.5914 15.2981 15.1124 14.914 15.4965C14.5298 15.8806 14.0088 16.0964 13.4656 16.0964H8.49121"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<circle cx="12.0002" cy="12.0002" r="9.3" stroke-width="2" stroke="currentColor"></circle>
+																</svg>
+
+																<a
+																	data-controller="utm-tracking"
+																	class="sign-in-view-salary text-reset ips-2 text-decoration-underline"
+																	:href="item.slug"
+																	x-text="item.salary"
+																></a>
+															</div>
+														</div>
+														<div class="border-top-dashed"></div>
+														<div class="imt-2"></div>
+														<div class="d-flex align-items-center text-dark-grey imt-1">
+															<svg fill="none" height="16" viewbox="0 0 24 25" width="16" xmlns="http://www.w3.org/2000/svg">
+																<g clip-path="url(#clip0_947_6633)">
+																	<path
+																		d="M19 14.625C19 13.6967 18.6312 12.8065 17.9749 12.1501C17.3185 11.4937 16.4283 11.125 15.5 11.125H8.5C7.57174 11.125 6.6815 11.4937 6.02513 12.1501C5.36875 12.8065 5 13.6967 5 14.625"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M12 8.5C13.933 8.5 15.5 6.933 15.5 5C15.5 3.067 13.933 1.5 12 1.5C10.067 1.5 8.5 3.067 8.5 5C8.5 6.933 10.067 8.5 12 8.5Z"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M11.5 18.9375H12.5"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<path
+																		d="M4.56116 22.7812L2.90039 15.0938H21.0996L19.3696 22.7812"
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																	></path>
+																	<line
+																		stroke-linecap="round"
+																		stroke-linejoin="round"
+																		stroke-width="2"
+																		stroke="currentColor"
+																		x1="1"
+																		x2="23"
+																		y1="23.5"
+																		y2="23.5"
+																	></line>
+																</g>
+																<defs>
+																	<clippath id="clip0_947_6633">
+																		<rect fill="white" height="24" transform="translate(0 0.5)" width="24"></rect>
+																	</clippath>
+																</defs>
+															</svg>
+
+															<span class="ips-2 small-text text-rich-grey"> Tại văn phòng </span>
+														</div>
+														<div class="d-flex align-items-center text-dark-grey imt-1">
+															<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170);;" 
+>
+
+																<path
+																	d="M12 14c2.206 0 4-1.794 4-4s-1.794-4-4-4-4 1.794-4 4 1.794 4 4 4zm0-6c1.103 0 2 .897 2 2s-.897 2-2 2-2-.897-2-2 .897-2 2-2z"
+																></path>
+																<path
+																	d="M11.42 21.814a.998.998 0 0 0 1.16 0C12.884 21.599 20.029 16.44 20 10c0-4.411-3.589-8-8-8S4 5.589 4 9.995c-.029 6.445 7.116 11.604 7.42 11.819zM12 4c3.309 0 6 2.691 6 6.005.021 4.438-4.388 8.423-6 9.73-1.611-1.308-6.021-5.294-6-9.735 0-3.309 2.691-6 6-6z"
+																></path>
+															</svg>
+
+															<span class="ips-2 small-text text-rich-grey" x-text="item.location"></span>
+														</div>
+														<div class="imt-3 imb-2">
+															<template x-for="requirement in item.requirement">
+																<a class="text-reset" data-controller="utm-tracking" href="#"
+																	><div class="itag itag-light itag-sm" x-text="requirement"></div>
+																</a>
+															</template>
+														</div>
+													</div>
+												</div>
+											</div>
+										</template>
+									</div>
+								</div>
+								<div class="bg-white search-noinfo text-center imt-6 imb-md-8 ipy-10 d-none" data-jobs--filter-target="searchNoInfo">
+									<div class="d-flex">
+										<div class="flex-grow-1">
+											<img
+												class="search-noinfo-image border-radius-large"
+												src="https://itviec.com/assets/robby/robby-oops-cd13e61e958cb387feae4f2276e78d19f123768a672880dca236bc611c591ca9.svg"
+											/>
+										</div>
+									</div>
+									<div class="ipx-6 ipx-md-8 ipt-5">
+										<h2 data-jobs--filter-target="textNoResult">Oops! The job you&#39;re looking for doesn&#39;t exist.</h2>
+									</div>
+								</div>
+
+								<div
+									aria-hidden="false"
+									class="modal fade"
+									data-action="keydown.esc-&gt;jobs--counter-filter#closeModal"
+									data-bs-backdrop="static"
+									data-controller="jobs--counter-filter"
+									data-jobs--counter-filter-target="modalJobFilter"
+									id="filter_job"
+									tabindex="-1"
+								>
+									<div class="modal-dialog modal-dialog-centered" data-controller="input-range" style="max-width: 800px !important">
+										<div class="modal-content">
+											<form
+												data-remote="true"
+												data-jobs--counter-filter-target="form"
+												data-action="ajax:success-&gt;jobs--filter#filter"
+												action="/it-jobs"
+												accept-charset="UTF-8"
+												method="get"
+											>
+												<input type="hidden" name="query" id="query" value="java" autocomplete="off" />
+												<input type="hidden" name="city" id="city" autocomplete="off" />
+												<input type="hidden" name="click_source" id="click_source" value="Navigation menu" autocomplete="off" />
+												<div class="modal-header p-0 ipx-8 ipy-4">
+													<h2>Filter</h2>
+													<button
+														aria-label="Close"
+														class="btn-close text-dark-grey"
+														data-action="click-&gt;jobs--counter-filter#closeModal"
+														type="button"
+													></button>
+												</div>
+												<div class="modal-body p-0 ipx-8 ipb-8">
+													<section class="ipt-8">
+														<h4 class="text-it-black text-start imb-3 lh-1">Level</h4>
+														<div class="d-block text-start">
+															<input type="hidden" name="job_level_names[]" value="" autocomplete="off" /><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="job_level_names_fresher"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Fresher"
+																	name="job_level_names[]"
+																	id="job_level_names_fresher"
+																/>
+																<span>Fresher</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="job_level_names_junior"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Junior"
+																	name="job_level_names[]"
+																	id="job_level_names_junior"
+																/>
+																<span>Junior</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="job_level_names_senior"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Senior"
+																	name="job_level_names[]"
+																	id="job_level_names_senior"
+																/>
+																<span>Senior</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="job_level_names_manager"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Manager"
+																	name="job_level_names[]"
+																	id="job_level_names_manager"
+																/>
+																<span>Manager</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span>
+															</label>
+														</div>
+													</section>
+													<section class="ipt-8">
+														<h4 class="text-it-black text-start imb-3 lh-1">Salary</h4>
+														<div class="d-block d-md-flex">
+															<div class="row w-100 range d-flex justify-content-center align-items-end">
+																<div class="col-12 col-md-3">
+																	<label class="form-label" for="customRange2">
+																		<span data-input-range-target="rangePrice">500$ - 10,000$</span>
+																	</label>
+																</div>
+																<div class="col-12 col-md-9 p-0">
+																	<div class="range-border ip-4">
+																		<div class="range-slider">
+																			<span class="range-selected" data-input-range-target="rangeSelected"></span>
+																		</div>
+																		<div class="range-input">
+																			<input
+																				class="min"
+																				data-action="change-&gt;jobs--counter-filter#changeRange input-&gt;input-range#rangeSlide"
+																				data-input-range-target="input"
+																				data-jobs--counter-filter-target="min"
+																				max="10000"
+																				min="500"
+																				name="salary_ranges[]"
+																				step="500"
+																				type="range"
+																				value="500"
+																			/>
+																			<input
+																				class="max"
+																				data-action="change-&gt;jobs--counter-filter#changeRange input-&gt;input-range#rangeSlide"
+																				data-input-range-target="input"
+																				data-jobs--counter-filter-target="max"
+																				max="10000"
+																				min="500"
+																				name="salary_ranges[]"
+																				step="500"
+																				type="range"
+																				value="10000"
+																			/>
+																		</div>
+																	</div>
+																</div>
+															</div>
+														</div>
+													</section>
+													<section class="ipt-8">
+														<h4 class="text-it-black text-start imb-3 lh-1">Company Type</h4>
+														<div class="d-block text-start">
+															<input type="hidden" name="company_types[]" value="" autocomplete="off" /><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="company_types_outsourcing"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Outsourcing"
+																	name="company_types[]"
+																	id="company_types_outsourcing"
+																/>
+																<span>IT Outsourcing</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="company_types_product"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Product"
+																	name="company_types[]"
+																	id="company_types_product"
+																/>
+																<span>IT Product</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="company_types_headhunt"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Headhunt"
+																	name="company_types[]"
+																	id="company_types_headhunt"
+																/>
+																<span>Headhunt</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="company_types_service"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Service"
+																	name="company_types[]"
+																	id="company_types_service"
+																/>
+																<span>IT Service and IT Consulting</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="company_types_non-it"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="Non-IT"
+																	name="company_types[]"
+																	id="company_types_non-it"
+																/>
+																<span>Non-IT</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span>
+															</label>
+														</div>
+													</section>
+													<section class="ipt-8">
+														<h4 class="text-it-black text-start imb-3 lh-1">Working Model</h4>
+														<div class="d-block text-start">
+															<input type="hidden" name="working_models[]" value="" autocomplete="off" /><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="working_models_onsite"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="onsite"
+																	name="working_models[]"
+																	id="working_models_onsite"
+																/>
+																<span>Tại văn phòng</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="working_models_remote"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="remote"
+																	name="working_models[]"
+																	id="working_models_remote"
+																/>
+																<span>Remote</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span> </label
+															><label
+																class="itag itag-lg itag-light imy-2 ime-2 normal-text"
+																data-controller="v2--toggle-icon"
+																data-v2--toggle-icon-target="label"
+																data-v2--toggle-icon-pair-icons-value='["\u003csvg class=&#39;feather-icon icon-md text-dark-grey&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n","\u003csvg class=&#39;feather-icon icon-md&#39;\u003e\n\u003cuse href=&#39;https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#check&#39;\u003e\u003c/use\u003e\n\u003c/svg\u003e\n"]'
+																for="working_models_hybrid"
+																><input
+																	class="btn-check"
+																	data-action="click-&gt;v2--toggle-icon#toggle click-&gt;jobs--counter-filter#checkedBox"
+																	data-jobs--counter-filter-target="checkBox"
+																	type="checkbox"
+																	value="hybrid"
+																	name="working_models[]"
+																	id="working_models_hybrid"
+																/>
+																<span>Hybrid</span>
+																<span>
+																	<div class="d-flex align-items-center" data-v2--toggle-icon-target="icon">
+																		<svg class="feather-icon icon-md text-dark-grey">
+																			<use
+																				href="https://itviec.com/assets/feather-icons-sprite-520cd3770a1002f7c87bd1ba253464228ad112abb4c34d81c8cda9f937487a49.svg#plus"
+																			></use>
+																		</svg>
+																	</div>
+																</span>
+															</label>
+														</div>
+													</section>
+												</div>
+												<div class="modal-footer justify-content-between p-0 ipx-8 ipy-4">
+													<a
+														class="flex-grow-1 flex-md-grow-0 hyperlink normal-text"
+														href="https://itviec.com/it-jobs/java?click_source=Navigation+menu"
+														>Reset filter <span data-jobs--counter-filter-target="checkedNumber"></span> </a
+													><button
+														class="ibtn ibtn-md ibtn-primary flex-grow-1 flex-md-grow-0"
+														data-action="click-&gt;jobs--counter-filter#filterApllied"
+														data-bs-dismiss="modal"
+														type="submit"
+													>
+														Apply
+													</button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+
+								<div class="pagination-search-jobs d-flex justify-content-center ipb-16" data-jobs--filter-target="pagination" id="pagination-container">
+									<nav class="ipagination imt-10" id="ipagination">
+										
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="border-top">
+				<div class="main ipy-4 bg-light-grey">
+					<div class="icontainer">
+						<div class="d-flex flex-column flex-md-row justify-content-between">
+							<div class="d-inline-flex flex-column flex-md-row">
+								<div class="text-rich-grey">
+									<a class="text-reset" data-controller="utm-tracking" href="/">Trang chủ</a>
+								</div>
+						
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+		<footer class="footer ipt-md-12 position-relative">
+			<div class="container-xxl p-0 imb-12">
+				<div class="row d-flex justify-content-md-between justify-content-center m-0 ipt-17 ipt-md-0" id="accordionFooter">
+					<div class="col-lg-3">
+						<div class="footer-logo">
+							<div class="footer-slogan mx-auto ipt-2 text-md-start text-center">
+								<img height="50" class="logo-itviec" alt="logo" src="https://i.pinimg.com/originals/55/e4/69/55e469775b496a2cde50e5f0d723e383.png" />
+							</div>
+						</div>
+					</div>
+					<div class="col-12 col-lg-3 p-0">
+						<h4 class="footer-header imx-md-0 imx-5 text-silver-grey ipy-4 pe-none">Liên hệ với chúng tôi:</h4>
+						<div class="d-flex flex-column imx-md-0 imx-5 small-text text-dark-grey">
+							<div class="d-flex align-items-center ipb-3 pe-none">
+								<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+									<path
+										d="M17.707 12.293a.999.999 0 0 0-1.414 0l-1.594 1.594c-.739-.22-2.118-.72-2.992-1.594s-1.374-2.253-1.594-2.992l1.594-1.594a.999.999 0 0 0 0-1.414l-4-4a.999.999 0 0 0-1.414 0L3.581 5.005c-.38.38-.594.902-.586 1.435.023 1.424.4 6.37 4.298 10.268s8.844 4.274 10.269 4.298h.028c.528 0 1.027-.208 1.405-.586l2.712-2.712a.999.999 0 0 0 0-1.414l-4-4.001zm-.127 6.712c-1.248-.021-5.518-.356-8.873-3.712-3.366-3.366-3.692-7.651-3.712-8.874L7 4.414 9.586 7 8.293 8.293a1 1 0 0 0-.272.912c.024.115.611 2.842 2.271 4.502s4.387 2.247 4.502 2.271a.991.991 0 0 0 .912-.271L17 14.414 19.586 17l-2.006 2.005z"
+									></path>
+								</svg>
+
+								<p class="ims-2">SĐT: (+84) 123456789</p>
+							</div>
+							<div class="d-flex align-items-center ipb-3 pe-none">
+								<svg
+    xmlns="http://www.w3.org/2000/svg"
+    width="20"
+    height="20"
+    viewBox="0 0 24 24"
+    style="fill: rgb(173, 170, 170); ;" 
+>
+
+									<path
+										d="M20 4H4c-1.103 0-2 .897-2 2v12c0 1.103.897 2 2 2h16c1.103 0 2-.897 2-2V6c0-1.103-.897-2-2-2zm0 2v.511l-8 6.223-8-6.222V6h16zM4 18V9.044l7.386 5.745a.994.994 0 0 0 1.228 0L20 9.044 20.002 18H4z"
+									></path>
+								</svg>
+
+								<p class="ims-2">Email: hitunghi@gmail.com</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+		</footer>
+		<!-- <script src="https://timviec.pages.dev/assets/js/render-job.js"></script> -->
+		<script>
+			document.addEventListener('alpine:init', () => {
+				Alpine.data('app', () => ({
+					btnClearText: false,
+					data: [],
+					firstHalf: [],
+					secondHalf: [],
+					listProvince: [],
+					pagination: {},
+					async init() {
+						await this.init_data();
+						await this.getListProvince();
+						await this.createPagination(this.pagination);
+					},
+					async init_data() {
+						var queryString = window.location.search;
+
+						// Tạo một đối tượng URLSearchParams từ query string
+						var urlParams = new URLSearchParams(queryString);
+
+						// Lấy giá trị của các tham số
+						var keyword = urlParams.get('keyword'); // "JohnDoe"
+						var location = urlParams.get('location'); // "25"
+						page = urlParams.get('page') ?? 1; // "25"
+						var api = `https://crawler-job.tung2003ictu.workers.dev/jobs?page=${page}`;
+						if (keyword) {
+							api = api + '&keyword=' + keyword;
+						}
+						if (location) {
+							api = api + '&location=' + location;
+						}
+						try {
+							var result = await (await fetch(api)).json();
+						} catch (err) {
+							console.log(err);
+						}
+						this.pagination = result.pagination;
+						this.data = result.data;
+						for (item of this.data) {
+							if (item.lower_bound == 0 && item.upper_bound == 0) {
+								item.salary = 'Thỏa thuận';
+							} else if (item.lower_bound == 0) {
+								item.salary = 'Tới ' + item.upper_bound + ' ' + item.unit;
+							} else if (item.upper_bound == 0) {
+								item.salary = 'Trên ' + item.lower_bound + ' ' + item.unit;
+							} else {
+								item.salary = item.lower_bound + ' - ' + item.upper_bound + ' ' + item.unit;
+							}
+							item.requirement = item.requirement.split(',');
+							item.daysPosted = 'Được đăng ' + this.daysPassed(item.created_at) + ' ngày trước';
+							item.slug = 'https://crawler-job.tung2003ictu.workers.dev/job-show/' + item.slug;
+						}
+						[this.firstHalf, this.secondHalf] = this.splitArrayIntoTwo(this.data);
+					},
+					async getListProvince() {
+						this.listProvince = (await (await fetch('https://crawler-job.tung2003ictu.workers.dev/api/v1/province')).json()).data;
+					},
+					createPagination(pagination) {
+						const paginationContainer = document.getElementById('ipagination');
+						paginationContainer.innerHTML = ''; // Xóa nội dung cũ
+
+						const { currentPage, totalPages } = pagination;
+						const delta = 2; // Số lượng trang xung quanh trang hiện tại
+						const range = [];
+
+						for (let i = Math.max(2, currentPage - delta); i <= Math.min(totalPages - 1, currentPage + delta); i++) {
+							range.push(i);
+						}
+
+						if (currentPage - delta > 2) {
+							range.unshift('...');
+						}
+						if (currentPage + delta < totalPages - 1) {
+							range.push('...');
+						}
+
+						range.unshift(1);
+						if (totalPages > 1) {
+							range.push(totalPages);
+						}
+
+						range.forEach((page) => {
+							const button = document.createElement('button');
+							button.textContent = page;
+							button.className = 'page';
+
+							if (page === '...') {
+								button.classList.add("gap")
+								button.disabled = true;
+							} else {
+								if (page === currentPage) {
+									button.classList.add("current")
+									button.disabled = true;
+									button.style.fontWeight = 'bold';
+								}
+								// Thêm sự kiện click để chuyển trang
+								button.addEventListener('click', () => {
+									this.fetchDataForPage(page);
+								});
+							}
+
+							paginationContainer.appendChild(button);
+						});
+					},
+					fetchDataForPage(page) {
+						let url = new URL(window.location.href);
+						url.searchParams.delete('page');
+						url.searchParams.append('page', page);
+						window.location.href = url.toString();
+					},
+					daysPassed(dateString) {
+						// Bước 1: Chuyển đổi chuỗi ngày tháng thành đối tượng Date
+						var inputDate = new Date(dateString);
+
+						// Bước 2: Lấy ngày hiện tại
+						var currentDate = new Date();
+
+						// Bước 3: Tính toán số ngày đã qua
+						var timeDifference = currentDate - inputDate; // Đơn vị là milliseconds
+						var daysDifference = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+						if (daysDifference <= 0) {
+							daysDifference = 1;
+						}
+						return daysDifference;
+					},
+					splitArrayIntoTwo(arr) {
+						// Bước 1: Tính toán chỉ số giữa
+						var midIndex = Math.floor(arr.length / 2);
+
+						// Bước 2: Tách mảng thành hai mảng bằng cách sử dụng slice
+						var firstHalf = arr.slice(0, midIndex);
+						var secondHalf = arr.slice(midIndex);
+
+						return [firstHalf, secondHalf];
+					},
+					showBtnClear() {
+						this.btnClearText = true;
+					},
+					searchJob() {
+						var search_form = document.getElementById('search-form');
+						var keyword = document.getElementById('keyword');
+						if (keyword.value.trim() == '') {
+						} else {
+							search_form.submit();
+						}
+					},
+					clearSearchInput() {
+						this.btnClearText = false;
+						var keyword = document.getElementById('keyword');
+						keyword.value = '';
+					},
+				}));
+			});
+		</script>
+	</body>
+</html>

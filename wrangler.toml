@@ -1,0 +1,8 @@
+name = "crawler-job"
+main = "src/index.js"
+compatibility_date = "2024-07-25"
+compatibility_flags = [ "nodejs_compat" ]
+
+[[d1_databases]]
+binding = "DB"
+database_id = "001384fd-cc76-4f88-b772-e148cc42cfba"
